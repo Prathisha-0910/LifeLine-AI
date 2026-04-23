@@ -39,6 +39,7 @@ LifeLine AI:
 (https://github.com/Prathisha-0910/LifeLine-AI/blob/main/Screenshot%202026-04-24%20005056.png?raw=true)
 (https://github.com/Prathisha-0910/LifeLine-AI/blob/main/Screenshot%202026-04-22%20193802.png?raw=true)
 (https://github.com/Prathisha-0910/LifeLine-AI/blob/main/Screenshot%202026-04-23%20225425.png?raw=true)
+[if error "click retry opening the page"]
 
 
 
