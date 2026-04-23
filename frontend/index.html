@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LifeLine AI 🚑</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #e63946;
+    }
+
+    button {
+      background: #e63946;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #c92f3c;
+    
+    }
+    button:hover {
+  transform: scale(1.05);
+    }
+
+    .card {
+      margin-top: 25px;
+      padding: 15px;
+      background: #f1faee;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .loading {
+      color: #555;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>🚑 LifeLine AI</h1>
+  <p>Smart Emergency Response System</p>
+
+  <button onclick="triggerEmergency()">🚨 Call Emergency</button>
+
+  <p class="loading" id="loading"></p>
+
+  <div class="card hidden" id="resultCard">
+    <p><b>📍 Location:</b> <span id="location"></span></p>
+    <p><b>🏥 Hospital:</b> <span id="hospital"></span></p>
+    <p><b>🛣 Route:</b> <span id="route"></span></p>
+    <p><b>🚑 Ambulance:</b> <span id="ambulance"></span></p>
+  </div>
+</div>
+
+<script>
+async function triggerEmergency() {
+  alert("Button clicked!");
+  document.getElementById("loading").innerText = "Processing emergency...";
+  
+  const response = await fetch("http://127.0.0.1:8000/emergency", {
+    method: "POST"
+  });
+
+  const data = await response.json();
+
+  document.getElementById("loading").innerText = "";
+
+  document.getElementById("location").innerText =
+    data.response.location.lat + ", " + data.response.location.lng;
+
+  document.getElementById("hospital").innerText =
+    data.response.hospital;
+
+  document.getElementById("route").innerText =
+    data.response.route;
+
+  document.getElementById("ambulance").innerText =
+    data.response.ambulance;
+
+  document.getElementById("resultCard").classList.remove("hidden");
+}
+new Audio("https://www.soundjay.com/button/beep-07.wav").play();
+</script>
+
+</body>
+</html>
