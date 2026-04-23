@@ -35,7 +35,7 @@ LifeLine AI:
 ---
 
 ## 📸 Screenshots
-(Add screenshots here)
+
 
 ---
 
