@@ -53,5 +53,16 @@ LifeLine AI:
 
 ---
 
+**Pdf file**
+https://drive.google.com/file/d/1ASCzvq_QOziI693Be0YD1DTXPe130w4E/view?usp=sharing
+
+---
+
+**PPT **
+https://drive.google.com/file/d/1cVCp-vwQNhrtlHQ1Y0v7x9mg0C19MzjY/view?usp=sharing
+
+
+---
+
 ## 👩‍💻 Author
 Prathisha S
